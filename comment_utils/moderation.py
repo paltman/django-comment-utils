@@ -452,7 +452,7 @@ class Moderator(object):
         
         """
         signals.pre_save.connect(self.pre_save_moderation, sender=comments.get_model())
-        signals.pre_save.connect(self.post_save_moderation, sender=comments.get_model())
+        signals.post_save.connect(self.post_save_moderation, sender=comments.get_model())
     
     def register(self, model_or_iterable, moderation_class):
         """
